@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Rewaa Mohsen - Computer Science Student & Aspiring Software Developer. Building .NET full-stack solutions and modern web applications.">
+  <meta name="keywords" content="Rewaa Mohsen, Software Developer, Full-Stack, Lotus University, DEPI, C#, C++, SQL, HTML, CSS, JavaScript, Portfolio">
+  <meta name="author" content="Rewaa Mohsen">
+  <meta name="theme-color" content="#0B071A">
+  <title>Rewaa Mohsen | Computer Science Student & Aspiring Software Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for English, Cairo for Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Orbs in Background -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Announcement / Status Ticker Bar -->
+  <aside class="top-announcement" aria-label="Status updates">
+    <div class="announcement-wrapper">
+      <div class="announcement-item">
+        <span class="live-pulse"></span>
+        <span data-i18n="tickerStatus">Open to Software & Full-Stack Opportunities</span>
+      </div>
+      <span class="announcement-sep">•</span>
+      <div class="announcement-item">
+        <span class="ticker-icon">🎓</span>
+        <span data-i18n="tickerUni">Lotus University '28</span>
+      </div>
+      <span class="announcement-sep">•</span>
+      <div class="announcement-item">
+        <span class="ticker-icon">⚡</span>
+        <span data-i18n="tickerDepi">DEPI Full-Stack .NET Trainee</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <!-- Brand Logo / Name -->
+      <a href="#hero" class="nav-brand" aria-label="Rewaa Mohsen Homepage">
+        <div class="brand-badge">
+          <span>RM</span>
+          <div class="brand-glow"></div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name" data-i18n="brandName">Rewaa Mohsen</span>
+          <span class="brand-role" data-i18n="brandRole">Software Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">About</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="navSkills">Skills</a></li>
+          <li><a href="#experience" class="nav-link" data-i18n="navExperience">Experience</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="navProjects">Projects</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls: Language Switcher, Theme Switcher & Mobile Hamburger -->
+      <div class="nav-controls">
+        <!-- Language Switcher Button (EN / AR) -->
+        <button id="langToggleBtn" class="control-btn lang-btn" type="button" aria-label="Switch Language / تغيير اللغة" title="Switch Language">
+          <svg class="control-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text" id="langDisplay">العربية</span>
+        </button>
+
+        <!-- Theme Switcher Button (Dark / Light) -->
+        <button id="themeToggleBtn" class="control-btn theme-btn" type="button" aria-label="Toggle Dark and Light Theme" title="Toggle Theme">
+          <!-- Moon Icon (Dark Mode) -->
+          <svg class="theme-icon icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode) -->
+          <svg class="theme-icon icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" class="mobile-toggle-btn" type="button" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <div class="nav-brand">
+        <div class="brand-badge"><span>RM</span></div>
+        <span class="brand-name" data-i18n="brandName">Rewaa Mohsen</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link" data-i18n="navHome">Home</a></li>
+      <li><a href="#about" class="drawer-link" data-i18n="navAbout">About</a></li>
+      <li><a href="#skills" class="drawer-link" data-i18n="navSkills">Skills</a></li>
+      <li><a href="#experience" class="drawer-link" data-i18n="navExperience">Experience</a></li>
+      <li><a href="#projects" class="drawer-link" data-i18n="navProjects">Projects</a></li>
+      <li><a href="#contact" class="drawer-link" data-i18n="navContact">Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-primary w-full" id="drawerCvBtn" data-i18n="heroBtnCv">Download CV</button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Left / Content Column -->
+        <div class="hero-content">
+          <div class="status-chip">
+            <span class="status-beacon"></span>
+            <span data-i18n="heroStatus">Computer Science Student & Trainee</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting" data-i18n="heroGreeting">Hello, I'm</span>
+            <span class="hero-name gradient-text" data-i18n="heroName">Rewaa Mohsen</span>
+          </h1>
+
+          <h2 class="hero-subtitle" data-i18n="heroSubtitle">
+            Computer Science Student <span class="accent-dot">•</span> Aspiring Software Developer
+          </h2>
+
+          <p class="hero-intro" data-i18n="heroIntro">
+            Computer Science student seeking to develop practical experience in software and full-stack development. Building .NET full-stack solutions and modern web applications.
+          </p>
+
+          <!-- Key Quick Badges -->
+          <div class="hero-tags">
+            <span class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span data-i18n="tagEdu">Lotus University '28</span>
+            </span>
+            <span class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span data-i18n="tagDepi">DEPI .NET Trainee</span>
+            </span>
+            <span class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <span data-i18n="tagStack">C# • C++ • SQL • Web</span>
+            </span>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" id="heroContactBtn">
+              <span data-i18n="heroBtnContact">Contact Me</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <button type="button" class="btn btn-secondary" id="heroCvBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="heroBtnCv">Download CV</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Right / Modern Interactive Code Showcase -->
+        <div class="hero-visual">
+          <div class="code-terminal-card">
+            <!-- Terminal Header -->
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>DeveloperProfile.cs</span>
+              </div>
+              <div class="terminal-lang">C# / .NET 8</div>
+            </div>
+
+            <!-- Terminal Code Body -->
+            <div class="terminal-code">
+              <pre><code><span class="c-keyword">namespace</span> <span class="c-type">RewaaPortfolio</span>
+{
+    <span class="c-keyword">public class</span> <span class="c-type">SoftwareDeveloper</span>
+    {
+        <span class="c-keyword">public string</span> <span class="c-prop">Name</span> { <span class="c-keyword">get</span>; } = <span class="c-string">"Rewaa Mohsen"</span>;
+        <span class="c-keyword">public string</span> <span class="c-prop">Degree</span> { <span class="c-keyword">get</span>; } = <span class="c-string">"B.Sc. Computer Science"</span>;
+        <span class="c-keyword">public string</span> <span class="c-prop">University</span> { <span class="c-keyword">get</span>; } = <span class="c-string">"Lotus University"</span>;
+        <span class="c-keyword">public int</span> <span class="c-prop">GraduationYear</span> { <span class="c-keyword">get</span>; } = <span class="c-num">2028</span>;
+        
+        <span class="c-keyword">public string</span> <span class="c-prop">Training</span> { <span class="c-keyword">get</span>; } = <span class="c-string">"DEPI Full-Stack .NET"</span>;
+        
+        <span class="c-keyword">public string</span>[] <span class="c-prop">FocusAreas</span> => <span class="c-keyword">new</span>[] 
+        { 
+            <span class="c-string">"Full-Stack .NET"</span>, 
+            <span class="c-string">"Web Engineering"</span>, 
+            <span class="c-string">"Algorithms & SQL"</span> 
+        };
+
+        <span class="c-keyword">public bool</span> <span class="c-prop">ReadyToBuild</span>() => <span class="c-keyword">true</span>;
+    }
+}</code></pre>
+            </div>
+
+            <!-- Terminal Interactive Status Footer -->
+            <div class="terminal-footer">
+              <div class="terminal-status-left">
+                <span class="status-indicator"></span>
+                <span class="status-text" data-i18n="terminalStatus">Build Succeeded • 0 Errors</span>
+              </div>
+              <button class="terminal-run-btn" id="terminalRunBtn" type="button" title="Execute Code Demo">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span data-i18n="terminalRun">Run Code</span>
+              </button>
+            </div>
+
+            <!-- Interactive Terminal Execution Output Box -->
+            <div class="terminal-output" id="terminalOutput">
+              <div class="output-line success">
+                <span class="prompt">></span> <span data-i18n="terminalOutMsg">Ready for high-impact software projects!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EDUCATION SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="aboutBadge">About Me</span>
+          <h2 class="section-title" data-i18n="aboutTitle">Education & Academic Background</h2>
+          <p class="section-subtitle" data-i18n="aboutSubtitle">Solid computer science foundations combined with ongoing hands-on full-stack development training.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Education Highlight Bento Card -->
+          <div class="glass-card education-card">
+            <div class="card-icon-header">
+              <div class="icon-avatar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <span class="card-pill" data-i18n="eduPill">Degree Program</span>
+            </div>
+
+            <h3 class="card-title" data-i18n="eduDegree">Bachelor of Computer Science</h3>
+            <h4 class="card-subtitle text-primary" data-i18n="eduUni">Lotus University</h4>
+
+            <p class="card-desc" data-i18n="eduDesc">
+              Pursuing rigorous academic studies covering modern computing fundamentals, algorithmic thinking, software engineering design principles, and scalable system architectures.
+            </p>
+
+            <div class="graduation-timeline">
+              <div class="grad-info">
+                <span class="grad-label" data-i18n="eduGradLabel">Expected Graduation:</span>
+                <span class="grad-year">2028</span>
+              </div>
+              <div class="grad-progress-track">
+                <div class="grad-progress-bar" style="width: 40%;"></div>
+              </div>
+              <div class="grad-milestones">
+                <span>2024</span>
+                <span data-i18n="eduMilestoneProgress">In Progress (Expected 2028)</span>
+                <span>2028</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION (Streamlined 3 Cards) -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="skillsBadge">Core Competencies</span>
+          <h2 class="section-title" data-i18n="skillsTitle">Technical Skills & Expertise</h2>
+          <p class="section-subtitle" data-i18n="skillsSubtitle">Streamlined core competencies across modern programming languages, full-stack web technologies, computer science principles, and databases.</p>
+        </div>
+
+        <!-- Skills Filter Bar -->
+        <div class="skills-filter-container">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All Skills</button>
+          <button class="filter-btn" data-filter="programming" data-i18n="filterProg">Programming</button>
+          <button class="filter-btn" data-filter="web" data-i18n="filterWeb">Web Development</button>
+          <button class="filter-btn" data-filter="cs-db" data-i18n="filterCsDb">CS & Database</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Skill Card 1: Programming -->
+          <div class="glass-card skill-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <span class="skill-badge-count" data-i18n="skillBadgeCount1">2 Languages</span>
+            </div>
+
+            <h3 class="skill-category-title" data-i18n="skillCatProg">Programming</h3>
+            <p class="skill-category-desc" data-i18n="skillCatProgDesc">Core languages used for algorithm development, object-oriented systems, and full-stack software.</p>
+
+            <div class="skill-tags-wrapper">
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-violet"></span>
+                <span class="tech-name">C#</span>
+                <span class="tech-level" data-i18n="levelDotnet">.NET Core</span>
+              </div>
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-purple"></span>
+                <span class="tech-name">C++</span>
+                <span class="tech-level" data-i18n="levelCore">Core</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Web Development -->
+          <div class="glass-card skill-card" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <span class="skill-badge-count" data-i18n="skillBadgeCount2">3 Technologies</span>
+            </div>
+
+            <h3 class="skill-category-title" data-i18n="skillCatWeb">Web Development</h3>
+            <p class="skill-category-desc" data-i18n="skillCatWebDesc">Modern frontend markup, responsive styling, and full-stack .NET web engineering.</p>
+
+            <div class="skill-tags-wrapper">
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-orange"></span>
+                <span class="tech-name">HTML</span>
+                <span class="tech-level" data-i18n="levelSemantic">Semantic</span>
+              </div>
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-blue"></span>
+                <span class="tech-name">CSS</span>
+                <span class="tech-level" data-i18n="levelResponsive">Responsive & Grid</span>
+              </div>
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-cyan"></span>
+                <span class="tech-name">Full-Stack .NET</span>
+                <span class="tech-level" data-i18n="levelFullstack">ASP.NET Core</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Computer Science & Database -->
+          <div class="glass-card skill-card" data-category="cs-db">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              </div>
+              <span class="skill-badge-count" data-i18n="skillBadgeCount3">3 Pillars</span>
+            </div>
+
+            <h3 class="skill-category-title" data-i18n="skillCatCsDb">Computer Science & Database</h3>
+            <p class="skill-category-desc" data-i18n="skillCatCsDbDesc">Fundamental algorithmic problem-solving, clean object-oriented architecture, and relational database systems.</p>
+
+            <div class="skill-tags-wrapper">
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-purple"></span>
+                <span class="tech-name">Data Structures & Algorithms</span>
+                <span class="tech-level" data-i18n="levelAlgorithms">Logic</span>
+              </div>
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-cyan"></span>
+                <span class="tech-name">OOP</span>
+                <span class="tech-level" data-i18n="levelOop">Architecture</span>
+              </div>
+              <div class="glowing-skill-tag">
+                <span class="tech-dot dot-violet"></span>
+                <span class="tech-name">SQL</span>
+                <span class="tech-level" data-i18n="levelRelational">Relational DB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING & EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="expBadge">Professional Journey</span>
+          <h2 class="section-title" data-i18n="expTitle">Training & Practical Experience</h2>
+          <p class="section-subtitle" data-i18n="expSubtitle">Intensive hands-on technical training sponsored by national technology leadership initiatives.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <div class="timeline-track"></div>
+
+          <!-- Main Experience Card: DEPI Trainee -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-pulse"></div>
+            </div>
+
+            <div class="glass-card experience-card">
+              <div class="exp-card-header">
+                <div class="exp-meta-left">
+                  <span class="exp-org-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    DEPI Initiative
+                  </span>
+                  <span class="status-live-badge">
+                    <span class="status-live-dot"></span>
+                    <span data-i18n="expStatusOngoing">Ongoing</span>
+                  </span>
+                </div>
+                <div class="exp-date-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span data-i18n="expPeriod">2024 - Present</span>
+                </div>
+              </div>
+
+              <h3 class="exp-role-title" data-i18n="expRole">Full-Stack .NET Development Trainee</h3>
+              <h4 class="exp-company-title" data-i18n="expCompany">Digital Egypt Pioneers Initiative (DEPI)</h4>
+
+              <p class="exp-description" data-i18n="expDesc">
+                Building practical knowledge in full-stack development through structured training and hands-on assignments. Developing production-ready .NET backends, relational databases, and dynamic web interfaces.
+              </p>
+
+              <!-- Learning Milestones Checklist -->
+              <div class="exp-highlights">
+                <div class="highlight-item">
+                  <div class="check-icon">✓</div>
+                  <span data-i18n="expH1">C# Programming & Object-Oriented Architecture for enterprise software.</span>
+                </div>
+                <div class="highlight-item">
+                  <div class="check-icon">✓</div>
+                  <span data-i18n="expH2">Hands-on experience with ASP.NET Core, MVC patterns, and RESTful API structures.</span>
+                </div>
+                <div class="highlight-item">
+                  <div class="check-icon">✓</div>
+                  <span data-i18n="expH3">Relational database design, query optimization, and SQL Server integration.</span>
+                </div>
+                <div class="highlight-item">
+                  <div class="check-icon">✓</div>
+                  <span data-i18n="expH4">Full-stack web fundamentals linking responsive frontend UI with backend services.</span>
+                </div>
+              </div>
+
+              <div class="exp-tags-row">
+                <span class="tech-pill">C#</span>
+                <span class="tech-pill">.NET Core</span>
+                <span class="tech-pill">SQL Server</span>
+                <span class="tech-pill">Web APIs</span>
+                <span class="tech-pill">HTML / CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="projBadge">Portfolio Work</span>
+          <h2 class="section-title" data-i18n="projTitle">Featured Projects</h2>
+          <p class="section-subtitle" data-i18n="projSubtitle">Demonstrating practical web architecture, organized content modeling, and interactive user experiences.</p>
+        </div>
+
+        <div class="projects-showcase">
+          <!-- Featured Project Card: World Food Journey -->
+          <article class="glass-card project-card featured-project">
+            <!-- Visual Interface Mockup -->
+            <div class="project-mockup-wrapper">
+              <div class="browser-window">
+                <div class="browser-header">
+                  <div class="browser-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="browser-address">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    <span>https://worldfoodjourney.local</span>
+                  </div>
+                </div>
+                <div class="browser-canvas">
+                  <div class="mockup-hero">
+                    <span class="mockup-badge">🌍 World Cuisine Explorer</span>
+                    <h4>Discover Authentic Global Flavors</h4>
+                    <div class="mockup-categories">
+                      <span class="mock-tab active">🍲 Dishes</span>
+                      <span class="mock-tab">🍹 Drinks</span>
+                      <span class="mock-tab">🍰 Desserts</span>
+                    </div>
+                  </div>
+                  <div class="mockup-cards-grid">
+                    <div class="mock-card">
+                      <div class="mock-card-flag">🇪🇬</div>
+                      <div class="mock-card-info">
+                        <strong>Egyptian Koshari</strong>
+                        <small>Cairo Classic</small>
+                      </div>
+                    </div>
+                    <div class="mock-card">
+                      <div class="mock-card-flag">🇮🇹</div>
+                      <div class="mock-card-info">
+                        <strong>Neapolitan Pizza</strong>
+                        <small>Campania Tradition</small>
+                      </div>
+                    </div>
+                    <div class="mock-card">
+                      <div class="mock-card-flag">🇯🇵</div>
+                      <div class="mock-card-info">
+                        <strong>Tokyo Ramen</strong>
+                        <small>Savory Broth</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Details Content -->
+            <div class="project-info-content">
+              <div class="project-type-tag">
+                <span class="tag-pulse"></span>
+                <span data-i18n="projType">Academic Web Project</span>
+              </div>
+
+              <h3 class="project-headline" data-i18n="projName">World Food Journey</h3>
+
+              <div class="project-bullet-list">
+                <div class="project-bullet">
+                  <div class="bullet-bullet">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <p data-i18n="projDetail1">Developed an academic web project focused on discovering food and cuisines from different countries.</p>
+                </div>
+
+                <div class="project-bullet">
+                  <div class="bullet-bullet">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <p data-i18n="projDetail2">Structured food, drinks, and dessert content into an organized, intuitive browsing experience.</p>
+                </div>
+
+                <div class="project-bullet">
+                  <div class="bullet-bullet">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <p data-i18n="projDetail3">Applied fundamental web development concepts to build an interactive project interface.</p>
+                </div>
+              </div>
+
+              <!-- Tech Pills -->
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5 Semantic</span>
+                <span class="tech-tag">CSS3 Flex & Grid</span>
+                <span class="tech-tag">Vanilla JavaScript</span>
+                <span class="tech-tag">Responsive UI/UX</span>
+              </div>
+
+              <!-- Project Interactive Buttons -->
+              <div class="project-actions">
+                <button class="btn btn-secondary" id="projModalTriggerBtn" type="button">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span data-i18n="projBtnView">Explore Project Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & GET IN TOUCH SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="contactBadge">Get In Touch</span>
+          <h2 class="section-title" data-i18n="contactTitle">Let's Connect & Build Together</h2>
+          <p class="section-subtitle" data-i18n="contactSubtitle">Whether you have an internship opportunity, project collaboration, or just want to connect, feel free to reach out!</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Contact Channels Info Cards -->
+          <div class="contact-info-column">
+            <!-- Email Card -->
+            <a href="mailto:RewaaMohsen9@gmail.com" class="glass-card contact-channel-card" id="emailChannel">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label" data-i18n="contactEmailLabel">Email Address</span>
+                <span class="channel-value">RewaaMohsen9@gmail.com</span>
+              </div>
+              <button type="button" class="copy-action-btn" id="copyEmailBtn" title="Copy email address" aria-label="Copy email address">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </a>
+
+            <!-- Phone Card -->
+            <a href="tel:01287895339" class="glass-card contact-channel-card" id="phoneChannel">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label" data-i18n="contactPhoneLabel">Phone Number</span>
+                <span class="channel-value" dir="ltr">01287895339</span>
+              </div>
+              <span class="channel-arrow">→</span>
+            </a>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/rewaa-mohsen" target="_blank" rel="noopener noreferrer" class="glass-card contact-channel-card" id="linkedinChannel">
+              <div class="channel-icon icon-linkedin">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="channel-text">
+                <span class="channel-label">LinkedIn Profile</span>
+                <span class="channel-value">linkedin.com/in/rewaa-mohsen</span>
+              </div>
+              <span class="channel-arrow">↗</span>
+            </a>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="glass-card contact-form-card">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" data-i18n="formName">Your Name</label>
+                  <input type="text" id="contactName" name="name" required placeholder="John Doe" data-i18n-ph="phName">
+                  <span class="form-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" data-i18n="formEmail">Your Email</label>
+                  <input type="email" id="contactEmail" name="email" required placeholder="name@example.com" data-i18n-ph="phEmail">
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" data-i18n="formSubject">Subject</label>
+                <input type="text" id="contactSubject" name="subject" required placeholder="Project Inquiry / Job Opportunity" data-i18n-ph="phSubject">
+                <span class="form-error" id="subjectError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" data-i18n="formMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="5" required placeholder="Hello Rewaa, I would like to discuss..." data-i18n-ph="phMessage"></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full submit-btn" id="submitBtn">
+                <span data-i18n="formSubmit">Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-badge"><span>RM</span></div>
+          <span class="brand-name" data-i18n="brandName">Rewaa Mohsen</span>
+        </a>
+        <p class="footer-tagline" data-i18n="footerTagline">
+          Computer Science Student & Full-Stack .NET Trainee crafting high-performance, modern digital products.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h5 data-i18n="footerNavTitle">Quick Links</h5>
+        <ul class="footer-nav">
+          <li><a href="#about" data-i18n="navAbout">About</a></li>
+          <li><a href="#skills" data-i18n="navSkills">Skills</a></li>
+          <li><a href="#experience" data-i18n="navExperience">Experience</a></li>
+          <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-col">
+        <h5 data-i18n="footerConnectTitle">Connect</h5>
+        <div class="social-links-row">
+          <a href="https://www.linkedin.com/in/rewaa-mohsen" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:RewaaMohsen9@gmail.com" class="social-circle" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="tel:01287895339" class="social-circle" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> Rewaa Mohsen. <span data-i18n="footerRights">All rights reserved.</span>
+        </p>
+        <button class="back-to-top-btn" id="backToTopBtn" type="button" aria-label="Back to Top">
+          <span data-i18n="backToTop">Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CV PREVIEW & DOWNLOAD MODAL -->
+  <div class="modal-backdrop" id="cvModal" aria-hidden="true" role="dialog" aria-labelledby="cvModalTitle">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-pill">Curriculum Vitae</span>
+          <h3 id="cvModalTitle" data-i18n="cvModalHeading">Rewaa Mohsen — Professional CV</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeCvModalBtn" aria-label="Close CV modal">&times;</button>
+      </div>
+
+      <div class="modal-body cv-paper" id="cvPrintableArea">
+        <div class="cv-header-block">
+          <h2 class="cv-person-name">Rewaa Mohsen</h2>
+          <p class="cv-person-sub" data-i18n="cvPersonSub">Computer Science Student | Aspiring Software Developer</p>
+          <div class="cv-contact-strip">
+            <span>RewaaMohsen9@gmail.com</span>
+            <span>•</span>
+            <span dir="ltr">01287895339</span>
+            <span>•</span>
+            <span>Egypt</span>
+          </div>
+        </div>
+
+        <!-- CV Summary -->
+        <div class="cv-section-block">
+          <h4 class="cv-section-title" data-i18n="cvSummaryTitle">Professional Summary</h4>
+          <p class="cv-text" data-i18n="cvSummaryText">
+            Computer Science student seeking to develop practical experience in software and full-stack development. Building .NET full-stack solutions and modern web applications with a focus on clean object-oriented architecture and user-friendly interfaces.
+          </p>
+        </div>
+
+        <!-- CV Education -->
+        <div class="cv-section-block">
+          <h4 class="cv-section-title" data-i18n="cvEduTitle">Education</h4>
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <strong data-i18n="cvEduDegree">Bachelor of Computer Science</strong>
+              <span class="cv-entry-date" data-i18n="cvEduExp">Expected Graduation: 2028</span>
+            </div>
+            <div class="cv-entry-sub" data-i18n="cvEduUni">Lotus University</div>
+            <p class="cv-entry-desc" data-i18n="cvEduFocus">Focus: Full-Stack .NET & Software Engineering</p>
+          </div>
+        </div>
+
+        <!-- CV Experience -->
+        <div class="cv-section-block">
+          <h4 class="cv-section-title" data-i18n="cvExpTitle">Training & Experience</h4>
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <strong data-i18n="cvExpRole">Full-Stack .NET Development Trainee</strong>
+              <span class="cv-entry-date" data-i18n="cvExpStatus">Ongoing (2024 - Present)</span>
+            </div>
+            <div class="cv-entry-sub" data-i18n="cvExpOrg">Digital Egypt Pioneers Initiative (DEPI)</div>
+            <p class="cv-entry-desc" data-i18n="cvExpDesc">Building practical knowledge in full-stack development through structured training and hands-on assignments. Mastering C#, ASP.NET Core, relational databases (SQL), and modern web interfaces.</p>
+          </div>
+        </div>
+
+        <!-- CV Projects -->
+        <div class="cv-section-block">
+          <h4 class="cv-section-title" data-i18n="cvProjTitle">Academic Projects</h4>
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <strong data-i18n="cvProjName">World Food Journey</strong>
+              <span class="cv-entry-date">Academic Project</span>
+            </div>
+            <ul class="cv-bullet-list">
+              <li data-i18n="cvProjB1">Developed an academic web project focused on discovering food and cuisines from different countries.</li>
+              <li data-i18n="cvProjB2">Structured food, drinks, and dessert content into an organized browsing experience.</li>
+              <li data-i18n="cvProjB3">Applied fundamental web development concepts (HTML, CSS, JavaScript) to build an interactive project interface.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CV Technical Skills (Streamlined 3 Categories) -->
+        <div class="cv-section-block">
+          <h4 class="cv-section-title" data-i18n="cvSkillsTitle">Technical Skills</h4>
+          <div class="cv-skills-columns">
+            <div>
+              <strong>Programming:</strong> C#, C++<br>
+              <strong>Web Development:</strong> HTML, CSS, Full-Stack .NET
+            </div>
+            <div>
+              <strong>Computer Science:</strong> Data Structures & Algorithms, OOP<br>
+              <strong>Database:</strong> SQL
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="printCvBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span data-i18n="cvBtnPrint">Print / Save as PDF</span>
+        </button>
+        <button type="button" class="btn btn-primary" id="downloadCvTxtBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span data-i18n="cvBtnDownload">Download Resume File</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="projModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-pill" data-i18n="projModalPill">Academic Web Project</span>
+          <h3 id="projModalTitle" data-i18n="projModalHeading">World Food Journey — Project Showcase</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeProjModalBtn" aria-label="Close project modal">&times;</button>
+      </div>
+
+      <div class="modal-body project-deepdive">
+        <p class="project-modal-intro" data-i18n="projModalIntro">
+          <strong>World Food Journey</strong> is an academic web application created to demonstrate core web engineering, clean layout design, and intuitive categorization of international cuisines.
+        </p>
+
+        <div class="proj-feature-cards">
+          <div class="p-card">
+            <span class="p-icon">🧭</span>
+            <h5 data-i18n="projF1Title">Multi-Country Discovery</h5>
+            <p data-i18n="projF1Desc">Allows users to explore culinary traditions across continents with curated descriptions, cultural heritage, and authentic recipes.</p>
+          </div>
+          <div class="p-card">
+            <span class="p-icon">📑</span>
+            <h5 data-i18n="projF2Title">Structured Categories</h5>
+            <p data-i18n="projF2Desc">Categorized cleanly into main dishes, traditional drinks, and sweet desserts for an effortless navigation flow.</p>
+          </div>
+          <div class="p-card">
+            <span class="p-icon">⚡</span>
+            <h5 data-i18n="projF3Title">Lightweight & Responsive</h5>
+            <p data-i18n="projF3Desc">Constructed using semantic HTML5, fluid CSS3 media queries, and responsive interactive elements without heavy dependencies.</p>
+          </div>
+        </div>
+
+        <div class="proj-modal-tech-specs">
+          <h5 data-i18n="projTechTitle">Technology Highlights</h5>
+          <ul>
+            <li><strong>Frontend:</strong> HTML5, CSS3 (Custom Properties & Flexbox), Vanilla JavaScript</li>
+            <li><strong>Design Paradigm:</strong> Clean typography, card-based navigation, responsive breakpoints</li>
+            <li><strong>Category:</strong> Academic Web Engineering Project</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="closeProjModalActionBtn" data-i18n="projModalClose">Close Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <div class="toast-icon" id="toastIcon">✓</div>
+    <div class="toast-content">
+      <h6 class="toast-title" id="toastTitle">Message Sent!</h6>
+      <p class="toast-desc" id="toastDesc">Thank you, your message has been received.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
